@@ -11,7 +11,7 @@ nunjucks.configure(process.cwd() + "/src/views", {
   express: app,
   watch: true,
 });
-app.use(express.static("public"));
+app.use(express.static("src"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/", indexRouter);
