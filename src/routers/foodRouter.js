@@ -17,4 +17,9 @@ foodRouter.get("/recommend", (req, res) => {
 
 foodRouter.route("/upload").get(getUpload).post(postUpload);
 
+foodRouter.get("/:id(\\d+)", (req, res) => {
+  const { id } = req.params;
+  return res.render("watch");
+});
+
 export default foodRouter;
