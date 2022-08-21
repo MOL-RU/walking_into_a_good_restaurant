@@ -20,7 +20,7 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-image: url('/src/public/image/세종대지도.png');
+    background-image: url('/public/image/세종대지도.png');
     background-size: cover;
 }
 
