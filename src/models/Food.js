@@ -11,5 +11,17 @@ const foodSchema = new mongoose.Schema({
   },
 });
 
+foodSchema.static("formatHashtags", function (hashtags) {
+  return hashtags
+    .split(",")
+    .map((word) => (word.startsWith("#") ? word : `#${word}`));
+});
+
+foodSchema.static("formatHashtags", function (hashtags) {
+  return hashtags
+    .split(",")
+    .map((word) => (word.startsWith("#") ? word : `#${word}`));
+});
+
 const Food = mongoose.model("Food", foodSchema);
 export default Food;

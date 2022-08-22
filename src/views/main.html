@@ -9,12 +9,23 @@
   </head>
   <body>
     <h1>main</h1>
-    {% for item in foods %}
-    <a href="/videos/{{[item.id]}}">{{[item.title]}}</a>
-    <ul>
-      <li>{{[item.description]}}</li>
-      <li>{{[item.hashtags]}}</li>
-    </ul>
-    {% endfor %}
+
+    <main>
+      <a href="/food/upload">upload food</a>
+      <br />
+      {% for item in foods %}
+      <a href="/food/{{[item.id]}}">{{[item.title]}}</a>
+      <ul>
+        <li>{{[item.description]}}</li>
+        {% for hashtag in item.hashtags %}
+        <ul>
+          <li>{{[hashtag]}}</li>
+        </ul>
+        {% endfor %}
+        <li>{{[item.createdAt]}}</li>
+      </ul>
+      <hr />
+      {% endfor %}
+    </main>
   </body>
 </html>

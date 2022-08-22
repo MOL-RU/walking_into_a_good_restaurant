@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit {{[food.title]}}</title>
+  </head>
+  <body>
+    <h4>Updatefood</h4>
+    <form method="POST">
+      <input
+        name="title"
+        ,
+        placeholder="Food Title"
+        ,
+        value="{{[food.title]}}"
+        ,
+        required
+      />
+      <input
+        placeholder="Description"
+        ,
+        required,
+        type="text"
+        ,
+        value="{{[food.description]}}"
+        ,
+        name="description"
+      />
+      <input
+        placeholder="Hashtagsm separated by comma."
+        ,
+        required,
+        type="text"
+        ,
+        value="{{[food.hashtags]}}"
+        ,
+        name="hashtags"
+      />
+      <input value="Save" , type="submit" />
+    </form>
+  </body>
+</html>

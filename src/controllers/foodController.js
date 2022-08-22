@@ -16,11 +16,49 @@ export const postUpload = async (req, res) => {
     await Food.create({
       title,
       description,
-      hashtags: hashtags.split(",").map((word) => `#${word}`),
+      hashtags: Food.formatHashtags(hashtags),
     });
     return res.redirect("/main");
   } catch (error) {
     console.log(error);
     return res.render("upload");
   }
+};
+
+export const watch = async (req, res) => {
+  const { id } = req.params;
+  const food = await Food.findById(id);
+  if (!food) {
+    return res.render("main");
+  }
+  return res.render("watch", { food });
+};
+
+export const getEdit = async (req, res) => {
+  const { id } = req.params;
+  const food = await Food.findById(id);
+  if (!food) {
+    return res.render("main");
+  }
+  return res.render("edit", { food });
+};
+
+export const postEdit = async (req, res) => {
+  const { id } = req.params;
+  const { title, description, hashtags } = req.body;
+  const food = await Food.exists({ _id: id });
+
+  await Food.findByIdAndUpdate(id, {
+    title,
+    description,
+    hashtags: Food.formatHashtags(hashtags),
+  });
+
+  return res.redirect(`/food/${id}`);
+};
+
+export const delteFood = async (req, res) => {
+  const { id } = req.params;
+  await Food.findByIdAndDelete(id);
+  return res.redirect("/main");
 };
