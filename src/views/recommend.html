@@ -6,32 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>recommend</title>
     <link rel="icon" href="/src/public/image/세종로고-removebg-preview.png">
- 
+    <link rel="stylesheet" href="/src/public/css/recommend.css"/>
   </head>
   <body>
-   <section class="recommend">
-    <h1 class="recommend_title">
-      오늘의 메뉴 추천!
-    </h1>
-    <h3 class="recommend_description">뭘 먹어야 할지 고민하는 당신을 위한!<br>
-    메뉴 추천 두둥</h3>
-   
-    <div class="recommend_categories">
-      <button class="category__btn">랜덤</button>
-      <button class="category__btn">한식</button>
-      <button class="category__btn">중식</button>
-      <button class="category__btn">일식</button>
-      <button class="category__btn">양식</button>
-      <button class="category__btn">치킨</button>
-      <button class="category__btn">버거</button>
-      <button class="category__btn">피자</button>
-      <button class="category__btn">분식</button>
-      <button class="category__btn">디저트</button>
-    </div>
+    <nav class="recommend_navbar">
+      <h1 class="recommend_title">
+        오늘의 메뉴 추천!
+      </h1>
+    </nav>
 
-    <div class="recommend_result"></div>
+    <section class="recommend">
+      <h3 class="recommend_description">뭘 먹어야 할지 고민하는 당신을 위한!<br>
+        메뉴 추천 두둥</h3>
 
-    <button class="get_recommend">추천받기</button>
-   </section>
+      <form action="" method="get">
+        <div class="recommend_categories">
+          <input type="radio" id="category1"><label for="category1">랜덤</label>
+          <input type="radio" id="category2"><label for="category2">한식</label>
+          <input type="radio" id="category3"><label for="category3">중식</label>
+          <input type="radio" id="category4"><label for="category4">일식</label>
+          <input type="radio" id="category5"><label for="category5">양식</label>
+          <input type="radio" id="category6"><label for="category6">치킨</label>
+          <input type="radio" id="category7"><label for="category7">버거</label>
+          <input type="radio" id="category8"><label for="category8">피자</label>
+          <input type="radio" id="category9"><label for="category9">분식</label>
+          <input type="radio" id="category10"><label for="category10">디저트</label>
+        </div>
+
+        <div class="recommend_result"></div>
+
+        <button type="submit" class="get_recommend">추천받기</button>
+      </form>
+    </section>
+
   </body>
 </html>
