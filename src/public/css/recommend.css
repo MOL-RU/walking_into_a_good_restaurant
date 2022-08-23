@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EliceDigitalBaeum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    /*color*/
+    --color-sejong-red: #ba0c2f;
+    --color-sejong-ivory: #f1f0d8;
+    --color-sejong-yellow: #fdd262;
+    --color-sejong-gray: #53565a;
+
+    /* Font size */
+    --font--large:48px;
+    --font--medium:28px;
+    --font--regular:18px;
+    --font--small:16px;
+    --font-micro:14px;
+    }
+    
+    /* Universal tags */
+    *{
+        box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
+
+        cursor: default;
+    }
+
+    /* 오늘의 메뉴추천 navbar  */
+    nav{
+        margin-top :30px;
+        padding : 10px;
+        font-family: 'EliceDigitalBaeum';
+        background-color:var(--color-sejong-red);
+        color: aliceblue;
+        text-align: center;
+    }
+
+    /* main 정렬 */
+    section{
+        text-align: center;
+    }
+
+    /* description 색상,글꼴 */
+    h3{
+        color: var(--color-sejong-gray);
+        font-family: 'EliceDigitalBaeum';
+
+        margin: 30px;
+    }
+
+    /* 추천 container */
+    .recommend_categories{
+        margin: 40px;
+        padding: 20px;
+        text-align: center;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+
+    }
+
+    /*radio 버튼 모양처럼 만들기*/
+    input[type=radio]{
+        display: none;
+    }
+
+    input[type=radio] + label{
+        cursor: pointer;
+
+        background-color: white;
+        border-radius: 4px;
+
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        margin: 10px;
+        line-height: 40px;
+
+        font-family: 'EliceDigitalBaeum-Bd' ;
+        font-size: var(--font--small);
+    }
+
+    /* 선택지가 checked 될 때 */
+    input[type=radio]:checked +label{
+        background-color: var(--color-sejong-ivory);
+    }
+
+    /* 랜덤추천 결과창 */
+    .recommend_result{
+        width: 500px;
+        height: 500px;
+        border-radius: 20%;
+        background-color: var(--color-sejong-ivory);
+
+        margin: auto;
+        margin-top: 40px;
+        
+    }
+    
+    /* 추천 받기 버튼 */
+    .get_recommend{
+        width: 700px;
+        height: 80px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--color-sejong-red);
+        
+        margin-top:40px;
+        
+        font-size: var(--font--regular);
+        font-family: 'EliceDigitalBaeum-Bd' ;
+        color: white;
+    }
+
+    /* 추천 받기 버튼 클릭 */
+    button:hover{
+        cursor: pointer;
+    }
