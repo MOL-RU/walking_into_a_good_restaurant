@@ -17,4 +17,8 @@ indexRouter.get("/join", (req, res) => {
 
 indexRouter.get("/main", main);
 
+indexRouter.get("/a", (req, res) => {
+  return res.render("a");
+});
+
 export default indexRouter;
