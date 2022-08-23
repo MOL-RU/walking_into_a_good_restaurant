@@ -1,5 +1,5 @@
 import express from "express";
-import { main } from "../controllers/foodController.js";
+import { main, categorySort } from "../controllers/foodController.js";
 
 const indexRouter = express.Router();
 

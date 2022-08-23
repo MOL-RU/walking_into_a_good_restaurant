@@ -10,6 +10,7 @@ const foodSchema = new mongoose.Schema({
     rating: { type: Number, default: 0, required: true },
   },
   foodUrl: String,
+  category: String,
 });
 
 foodSchema.static("formatHashtags", function (hashtags) {
