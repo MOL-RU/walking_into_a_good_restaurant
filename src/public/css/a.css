@@ -1,0 +1,46 @@
+
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EliceDigitalBaeum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.content{
+    margin-left: 300px;
+    display: grid;
+    grid-template-columns: 500px 500px 500px ;
+    grid-template-rows: 400px 400px;
+}
+.title{
+    margin-left: 300px;
+    font-family: 'EliceDigitalBaeum-Bd' ;
+}
+.hash{
+    font-family: 'EliceDigitalBaeum-Bd' ;
+    color: rgb(195, 0, 47);
+}
+.name{
+    display: inline-block;
+    font-family: 'EliceDigitalBaeum-Bd' ;
+}
+.grade{
+    display: inline-block;
+    font-family: 'EliceDigitalBaeum';
+    font-family: 'EliceDigitalBaeum';
+}
+.menu{
+    font-family: 'EliceDigitalBaeum';
+}
+
+*{margin : 0 ;
+    padding 0;}
+
+
