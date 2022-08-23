@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>watch</title>
+    <title>{{[food.title]}}</title>
   </head>
-  <body></body>
+  <body>
+    <h1>{{[food.title]}}</h1>
+    <ul>
+      <li>{{[food.description]}}</li>
+      <li>{{[food.hashtags]}}</li>
+      <li>{{[food.createdAt]}}</li>
+    </ul>
+    <a href="{{[food._id]}}/edit">edit food</a>
+    <a href="{{[food._id]}}/delete">Delete food</a>
+    <br />
+    <a href="/main">go to home</a>
+  </body>
 </html>

@@ -15,6 +15,7 @@ nunjucks.configure(process.cwd() + "/src/views", {
 });
 
 app.use(express.static("src"));
+app.use("/uploads", express.static("uploads"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

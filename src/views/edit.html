@@ -4,30 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Edit {{[food.title]}}</title>
   </head>
   <body>
-    <form method="POST" , enctype="multipart/form-data">
-      <input placeholder="Title" , required, type="text" , name="title" />
-      <br />
+    <h4>Updatefood</h4>
+    <form method="POST">
+      <input
+        name="title"
+        ,
+        placeholder="Food Title"
+        ,
+        value="{{[food.title]}}"
+        ,
+        required
+      />
       <input
         placeholder="Description"
         ,
         required,
         type="text"
         ,
+        value="{{[food.description]}}"
+        ,
         name="description"
       />
-      <br />
       <input
         placeholder="Hashtagsm separated by comma."
         ,
         required,
         type="text"
         ,
+        value="{{[food.hashtags]}}"
+        ,
         name="hashtags"
       />
-      <br />
       <input
         placeholder="음식의 종류를 작성하세요 (ex. 한식, 일식)"
         ,
@@ -35,10 +45,10 @@
         type="text"
         ,
         name="category"
+        ,
+        value="{{[food.category]}}"
       />
-      <label for="foodpic">음식사진 올리기</label>
-      <input type="file" , id="foodpic" , name="foodpic" , accept="image/*" />
-      <input type="submit" , value="Upload Food" , required />
+      <input value="Save" , type="submit" />
     </form>
   </body>
 </html>

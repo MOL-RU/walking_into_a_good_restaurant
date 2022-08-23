@@ -1,5 +1,5 @@
 import express from "express";
-import { main } from "../controllers/foodController.js";
+import { main, categorySort } from "../controllers/foodController.js";
 
 const indexRouter = express.Router();
 
@@ -16,5 +16,9 @@ indexRouter.get("/join", (req, res) => {
 });
 
 indexRouter.get("/main", main);
+
+indexRouter.get("/a", (req, res) => {
+  return res.render("a");
+});
 
 export default indexRouter;

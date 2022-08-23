@@ -1,5 +1,16 @@
 import express from "express";
-import { getUpload, postUpload } from "../controllers/foodController.js";
+import {
+  getEdit,
+  getUpload,
+  postUpload,
+  postEdit,
+  delteFood,
+  watch,
+  search,
+  categorySort,
+  recommend,
+} from "../controllers/foodController.js";
+import { uploadFiles } from "../middlewares.js";
 
 const foodRouter = express.Router();
 
@@ -11,15 +22,19 @@ foodRouter.get("/map", (req, res) => {
   return res.render("map");
 });
 
-foodRouter.get("/recommend", (req, res) => {
-  return res.render("recommend");
-});
+foodRouter.get("/:id([0-9a-f]{24})", watch);
 
-foodRouter.route("/upload").get(getUpload).post(postUpload);
+foodRouter
+  .route("/upload")
+  .get(getUpload)
+  .post(uploadFiles.single("foodpic"), postUpload);
+foodRouter
+  .route("/:id([0-9a-f]{24})/edit")
+  .get(getEdit)
+  .post(uploadFiles.single("foodpic"), postEdit);
+foodRouter.route("/:id([0-9a-f]{24})/delete").get(delteFood);
 
-foodRouter.get("/:id(\\d+)", (req, res) => {
-  const { id } = req.params;
-  return res.render("watch");
-});
+foodRouter.get("/search", categorySort);
+foodRouter.get("/recommend", recommend);
 
 export default foodRouter;
