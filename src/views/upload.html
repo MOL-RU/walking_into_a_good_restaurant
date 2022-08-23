@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form method="POST">
+    <form method="POST" , enctype="multipart/form-data">
       <input placeholder="Title" , required, type="text" , name="title" />
       <input
         placeholder="Description"
@@ -25,6 +25,8 @@
         ,
         name="hashtags"
       />
+      <label for="foodpic">음식사진 올리기</label>
+      <input type="file" , id="foodpic" , name="foodpic" , accept="image/*" />
       <input type="submit" , value="Upload Food" />
     </form>
   </body>

@@ -1,8 +1,7 @@
 import Food from "../models/Food.js";
 
 export const main = async (req, res) => {
-  const foods = await Food.find({});
-  console.log(foods);
+  const foods = await Food.find({}).sort({ createdAt: "desc" });
   return res.render("main", { foods });
 };
 
@@ -12,11 +11,14 @@ export const getUpload = (req, res) => {
 
 export const postUpload = async (req, res) => {
   const { title, description, hashtags } = req.body;
+  const foodImg = req.file;
+  console.log(foodImg);
   try {
     await Food.create({
       title,
       description,
       hashtags: Food.formatHashtags(hashtags),
+      foodUrl: foodImg.path,
     });
     return res.redirect("/main");
   } catch (error) {
@@ -61,4 +63,18 @@ export const delteFood = async (req, res) => {
   const { id } = req.params;
   await Food.findByIdAndDelete(id);
   return res.redirect("/main");
+};
+
+export const search = async (req, res) => {
+  const { keyword } = req.query;
+  let foods = [];
+  if (keyword) {
+    foods = await Food.find({
+      title: {
+        $regex: new RegExp(`${keyword}`, "i"),
+      },
+    });
+  }
+
+  return res.render("search", { foods });
 };

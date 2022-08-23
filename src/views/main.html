@@ -12,10 +12,12 @@
 
     <main>
       <a href="/food/upload">upload food</a>
+      <a href="/food/search">search food</a>
       <br />
       {% for item in foods %}
       <a href="/food/{{[item.id]}}">{{[item.title]}}</a>
       <ul>
+        <img src="{{[item.foodUrl]}}" , width="100" , height="100" />
         <li>{{[item.description]}}</li>
         {% for hashtag in item.hashtags %}
         <ul>

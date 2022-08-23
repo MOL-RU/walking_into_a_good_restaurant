@@ -6,7 +6,9 @@ import {
   postEdit,
   delteFood,
   watch,
+  search,
 } from "../controllers/foodController.js";
+import { uploadFiles } from "../middlewares.js";
 
 const foodRouter = express.Router();
 
@@ -24,8 +26,16 @@ foodRouter.get("/recommend", (req, res) => {
 
 foodRouter.get("/:id([0-9a-f]{24})", watch);
 
-foodRouter.route("/upload").get(getUpload).post(postUpload);
-foodRouter.route("/:id([0-9a-f]{24})/edit").get(getEdit).post(postEdit);
+foodRouter
+  .route("/upload")
+  .get(getUpload)
+  .post(uploadFiles.single("foodpic"), postUpload);
+foodRouter
+  .route("/:id([0-9a-f]{24})/edit")
+  .get(getEdit)
+  .post(uploadFiles.single("foodpic"), postEdit);
 foodRouter.route("/:id([0-9a-f]{24})/delete").get(delteFood);
+
+foodRouter.get("/search", search);
 
 export default foodRouter;
