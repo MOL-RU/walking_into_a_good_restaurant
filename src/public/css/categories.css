@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'EliceDigitalBaeum-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'EliceDigitalBaeum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font setting */
+h1, h2, h3, h4, h5, h6{
+    font-family: 'EliceDigitalBaeum';
+    margin: 10px auto;
+}
+
+/* navbar */
+.section__navbar {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    text-align: center;
+    margin: auto;
+    max-width: 1150px;
+    border-bottom: 3px solid black;
+}
+
+.about__majors {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.navbar__img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 10px 25px
+}
+
+h2{
+    font-size: 25px
+}
+
+/* main */
+#main{
+    margin: 0 auto;
+    width: 1150px;
+}
+/* line */
+.section__line{
+    float: left;
+    width: 350px;
+    height: 450px;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.food__img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 20px 0px 10px 30px;
+}
+
+.food__info{
+    display: flex;
+}
+
+h3{
+    font-size: 18px
+}
+
+h4{
+    font-size: 15px;
+}
+
+strong{
+    color:gold;
+}
+
+.food__title{
+    width: 55%;
+    height: 25px;   
+    margin: 10px 2px 10px 30px;
+}
+
+.food__stars{
+    max-width: 50px;
+    margin: 12px 2px 8px;
+}
+
+.food__distance{
+    max-width: 50px;
+    margin: 12px 2px 8px 8px;
+}
+
+h5{
+    font-size: 14px;
+}
+
+.food__hashtag{
+    margin: 5px 20px 15px;
+    padding: 0px 10px 15px;
+    border-bottom: 3px solid black;
+}
+
+#last__hashtag{
+    border: 0;
+}
+
+/* map */
+.section__map{
+    float: right;
+    width: 800px;
+    height: 450px;
+}
+
+#sjumap{
+    width: 750px;
+    height: 430px;
+    margin: 10px 30px 10px 20px;
+}
