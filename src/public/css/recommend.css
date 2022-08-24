@@ -31,22 +31,45 @@
 /* Universal tags */
 * {
   box-sizing: border-box;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
 
   cursor: default;
 }
 
-/* 오늘의 메뉴추천 navbar  */
-nav {
-  margin-top: 30px;
+/*Home 버튼 */
+
+.home {
+  width: 200px;
+  height: 75px;
   padding: 10px;
-  font-family: "EliceDigitalBaeum";
   background-color: var(--color-sejong-red);
+
+  font-family: "EliceDigitalBaeum";
   color: aliceblue;
   text-align: center;
+
+  border: white;
+
+  cursor: pointer;
+  margin-top: 0%;
 }
 
+/* Home 버튼 글자 */
+button > h3 {
+  color: white;
+  margin: 0%;
+  cursor: pointer;
+}
+
+button > p {
+  cursor: pointer;
+}
+/* 오늘의 메뉴 추천 */
+.recommend_title {
+  padding: 20px 0px;
+  border-top: 2px solid var(--color-sejong-gray);
+  border-bottom: 2px solid var(--color-sejong-gray);
+}
 /* main 정렬 */
 section {
   text-align: center;
@@ -57,7 +80,7 @@ h3 {
   color: var(--color-sejong-gray);
   font-family: "EliceDigitalBaeum";
 
-  margin: 30px;
+  margin: 20px;
 }
 
 /* 추천 container */
@@ -69,52 +92,26 @@ h3 {
   border-bottom: 2px solid black;
 }
 
-/*radio 버튼 모양처럼 만들기*/
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"] + label {
-  cursor: pointer;
-
-  background-color: white;
-  border-radius: 4px;
-
-  display: inline-block;
-  width: 80px;
-  height: 40px;
-  margin: 10px;
-  line-height: 40px;
-
-  font-family: "EliceDigitalBaeum-Bd";
-  font-size: var(--font--small);
-}
-
-/* 선택지가 checked 될 때 */
-input[type="radio"]:checked + label {
-  background-color: var(--color-sejong-ivory);
-}
-
 /* 랜덤추천 결과창 */
 .recommend_result {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   border-radius: 20%;
   background-color: var(--color-sejong-ivory);
 
   margin: auto;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 /* 추천 받기 버튼 */
 .get_recommend {
-  width: 700px;
-  height: 80px;
+  width: 450px;
+  height: 50px;
   border-radius: 10px;
   border: none;
   background-color: var(--color-sejong-red);
 
-  margin-top: 40px;
+  margin-top: 20px;
 
   font-size: var(--font--regular);
   font-family: "EliceDigitalBaeum-Bd";

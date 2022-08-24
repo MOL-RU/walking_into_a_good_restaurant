@@ -6,80 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>recommend</title>
     <link rel="icon" href="/src/public/image/세종로고-removebg-preview.png" />
-    <link rel="stylesheet" href="/src/public/css/recommend.css" />
+    <link rel="stylesheet" href="/public/css/recommend.css" />
   </head>
   <body>
     <nav class="recommend_navbar">
-      <h1 class="recommend_title">오늘의 메뉴 추천!</h1>
-    </nav>
+      <button type="button" class="home" id="btn" 
+	onclick="document.location.href='http://localhost:3500/main'">
+  <h3>걸어서 맛집 속으로</h3>
+  <p>세종대 학생만을 위한 가장 완벽한 맛집 지도</p>
+</button>
+    </nav>  
 
     <section class="recommend">
+      <h1 class="recommend_title">오늘의 메뉴 추천!</h1>
       <h3 class="recommend_description">
         뭘 먹어야 할지 고민하는 당신을 위한!<br />
         메뉴 추천 두둥
       </h3>
 
-      <form action="" method="get">
-        <div class="recommend_categories">
-          <input type="radio" name="select" id="category1" /><label
-            for="category1"
-            >랜덤</label
-          >
-          <input type="radio" name="select" id="category2" /><label
-            for="category2"
-            >한식</label
-          >
-          <input type="radio" name="select" id="category3" /><label
-            for="category3"
-            >중식</label
-          >
-          <input type="radio" name="select" id="category4" /><label
-            for="category4"
-            >일식</label
-          >
-          <input type="radio" name="select" id="category5" /><label
-            for="category5"
-            >양식</label
-          >
-          <input type="radio" name="select" id="category6" /><label
-            for="category6"
-            >치킨</label
-          >
-          <input type="radio" name="select" id="category7" /><label
-            for="category7"
-            >버거</label
-          >
-          <input type="radio" name="select" id="category8" /><label
-            for="category8"
-            >피자</label
-          >
-          <input type="radio" name="select" id="category9" /><label
-            for="category9"
-            >분식</label
-          >
-          <input type="radio" name="select" id="category10" /><label
-            for="category10"
-            >디저트</label
-          >
-        </div>
-
-        <div class="recommend_result">
-          <a href="/food/{{[recoFood.id]}}">{{[recoFood.title]}}</a>
+      <div class="recommend_result">
+        <a href="/food/{{[recoFood.id]}}">{{[recoFood.title]}}</a>
+        <ul>
+          <img src="/{{[recoFood.foodUrl]}}" , width="100" , height="100" />
+          <li>{{[recoFood.description]}}</li>
+          <li>{{[recoFood.category]}}</li>
+          {% for hashtag in recoFood.hashtags %}
           <ul>
-            <img src="/{{[recoFood.foodUrl]}}" , width="100" , height="100" />
-            <li>{{[recoFood.description]}}</li>
-            <li>{{[recoFood.category]}}</li>
-            {% for hashtag in recoFood.hashtags %}
-            <ul>
-              <li>{{[hashtag]}}</li>
-            </ul>
-            {% endfor %}
-            <li>{{[recoFood.createdAt]}}</li>
+            <li>{{[hashtag]}}</li>
           </ul>
-        </div>
+          {% endfor %}
+        </ul>
+      </div>
 
+      <form action="" method="get">
         <button type="submit" class="get_recommend">추천받기</button>
       </form>
+
     </section>
   </body>
 </html>
