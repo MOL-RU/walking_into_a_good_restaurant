@@ -1,5 +1,6 @@
 import "./db.js";
 import "./models/Food.js";
+import "./models/User.js";
 import app from "./server.js";
 
 const port = 3500;

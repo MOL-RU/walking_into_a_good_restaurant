@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+}
+body {
+  width: 100wh;
+  background-color: #f1f0d8;
+}
+
+header div {
+  height: 80px;
+  background-color: #ba0c2f;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div span {
+  font-size: 30px;
+  color: white;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  width: 100%;
+
+  margin-top: 50px;
+}
+
+form span {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+form p {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 5px;
+}
+form div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 300px;
+  height: 50px;
+}
+
+.join_submit {
+  margin-top: 25px;
+  width: 250px;
+  height: 60px;
+  background-color: #ba0c2f;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+footer {
+  margin-left: 50px;
+  margin-top: 30px;
+  font-size: 20px;
+}

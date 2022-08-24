@@ -12,7 +12,6 @@ export const getUpload = (req, res) => {
 export const postUpload = async (req, res) => {
   const { title, description, hashtags, category } = req.body;
   const foodImg = req.file;
-  console.log(foodImg);
   try {
     await Food.create({
       title,
@@ -24,7 +23,7 @@ export const postUpload = async (req, res) => {
     return res.redirect("/main");
   } catch (error) {
     console.log(error);
-    return res.render("upload");
+    return res.status(400).render("upload");
   }
 };
 
@@ -41,7 +40,7 @@ export const getEdit = async (req, res) => {
   const { id } = req.params;
   const food = await Food.findById(id);
   if (!food) {
-    return res.render("main");
+    return res.status(404).render("main");
   }
   return res.render("edit", { food });
 };
@@ -95,8 +94,7 @@ export const categorySort = async (req, res) => {
 };
 
 export const recommend = async (req, res) => {
-  let hello = await Food.aggregate([{ $sample: { size: 1 } }]);
-  console.log(hello);
-
-  return res.render("recommend");
+  let recoFood = await Food.aggregate([{ $sample: { size: 1 } }]);
+  recoFood = recoFood[0];
+  return res.render("recommend", { recoFood });
 };
