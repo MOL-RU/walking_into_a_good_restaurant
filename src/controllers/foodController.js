@@ -95,8 +95,7 @@ export const categorySort = async (req, res) => {
 };
 
 export const recommend = async (req, res) => {
-  let hello = await Food.aggregate([{ $sample: { size: 1 } }]);
-  console.log(hello);
-
-  return res.render("recommend");
+  let recoFood = await Food.aggregate([{ $sample: { size: 1 } }]);
+  recoFood = recoFood[0];
+  return res.render("recommend", { recoFood });
 };
