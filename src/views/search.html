@@ -10,14 +10,16 @@
     <h1>search</h1>
 
     <form method="GET">
-      <input placeholder="Search by title" , name="keyword" , type="text" />
+      <input placeholder="Search by title" , name="category" , type="text" />
       <input type="submit" , value="Submit Now" />
     </form>
 
     {% for item in foods %}
     <a href="/food/{{[item.id]}}">{{[item.title]}}</a>
     <ul>
+      <img src="/{{[item.foodUrl]}}" , width="100" , height="100" />
       <li>{{[item.description]}}</li>
+      <li>{{[item.category]}}</li>
       {% for hashtag in item.hashtags %}
       <ul>
         <li>{{[hashtag]}}</li>

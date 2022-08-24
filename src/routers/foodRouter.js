@@ -7,6 +7,8 @@ import {
   delteFood,
   watch,
   search,
+  categorySort,
+  recommend,
 } from "../controllers/foodController.js";
 import { uploadFiles } from "../middlewares.js";
 
@@ -18,10 +20,6 @@ foodRouter.get("/categories", (req, res) => {
 
 foodRouter.get("/map", (req, res) => {
   return res.render("map");
-});
-
-foodRouter.get("/recommend", (req, res) => {
-  return res.render("recommend");
 });
 
 foodRouter.get("/:id([0-9a-f]{24})", watch);
@@ -36,6 +34,7 @@ foodRouter
   .post(uploadFiles.single("foodpic"), postEdit);
 foodRouter.route("/:id([0-9a-f]{24})/delete").get(delteFood);
 
-foodRouter.get("/search", search);
+foodRouter.get("/search", categorySort);
+foodRouter.get("/recommend", recommend);
 
 export default foodRouter;

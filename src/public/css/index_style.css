@@ -1,54 +1,52 @@
-
 @font-face {
-    font-family: 'EliceDigitalBaeum-Bd';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "EliceDigitalBaeum-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'EliceDigitalBaeum';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "EliceDigitalBaeum";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
-*{
-    margin: 0;
-    padding : 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    height: 100vh;
-    width: 100vw;
-    background-image: url('/public/image/세종대지도.png');
-    background-size: cover;
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/public/image/세종대지도.png");
+  background-size: cover;
 }
 
-
-nav{
-    margin-top :30px;
-    padding : 10px;
-    font-family: 'EliceDigitalBaeum';
-    background-color:rgb(195, 0, 47);
-    color: aliceblue;
+nav {
+  margin-top: 30px;
+  padding: 10px;
+  font-family: "EliceDigitalBaeum";
+  background-color: rgb(195, 0, 47);
+  color: aliceblue;
 }
 
-button{
-    font-size: 35px ;
-    font-weight: bold;
-    font-family: 'EliceDigitalBaeum-Bd' ;
-    padding: 10px 20px 10px 20px;
-    position: relative;
-    top : 200px;
-    border: 5px solid rgb(195, 0, 47) ;
-    background-color: #fff;
-    color:rgb(81, 98, 111) ;
-    border-radius: 5px;
+button {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "EliceDigitalBaeum-Bd";
+  padding: 10px 20px 10px 20px;
+  position: relative;
+  top: 200px;
+  border: 5px solid #ba0c2f;
+  background-color: #fff;
+  color: rgb(81, 98, 111);
+  border-radius: 5px;
 }
 
-button:hover{
-    background-color: rgb(195, 0, 47);
-    color: #fff;
+button:hover {
+  background-color: #ba0c2f;
+  color: #fff;
 }
-
-

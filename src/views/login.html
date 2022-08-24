@@ -5,8 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>login</title>
+    <link rel="stylesheet" href="/public/css/login.css" />
   </head>
   <body>
-    <h1>login</h1>
+    <header>
+      <span>누구보다 빠르게 맛집투어 시작하기</span>
+    </header>
+    <main>
+      <div>
+        {% if errorMessage %}
+        <span>{{[errorMessage]}}</span>
+        {% endif %}
+      </div>
+
+      <form method="POST" class="login_form">
+        <input placeholder="Username" type="text" , required, name="username" />
+        <input
+          placeholder="Password"
+          type="password"
+          ,
+          required,
+          name="password"
+        />
+        <input type="submit" , value="Login" />
+      </form>
+    </main>
+
+    <footer>
+      <div>
+        <span>아직도 맛집 투어 멤버가 아니신가요?</span>
+        <div class="footer_a">
+          <a href="/join">회원가입</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -9,6 +9,7 @@
   <body>
     <form method="POST" , enctype="multipart/form-data">
       <input placeholder="Title" , required, type="text" , name="title" />
+      <br />
       <input
         placeholder="Description"
         ,
@@ -17,6 +18,7 @@
         ,
         name="description"
       />
+      <br />
       <input
         placeholder="Hashtagsm separated by comma."
         ,
@@ -25,9 +27,18 @@
         ,
         name="hashtags"
       />
+      <br />
+      <input
+        placeholder="음식의 종류를 작성하세요 (ex. 한식, 일식)"
+        ,
+        required,
+        type="text"
+        ,
+        name="category"
+      />
       <label for="foodpic">음식사진 올리기</label>
       <input type="file" , id="foodpic" , name="foodpic" , accept="image/*" />
-      <input type="submit" , value="Upload Food" />
+      <input type="submit" , value="Upload Food" , required />
     </form>
   </body>
 </html>
