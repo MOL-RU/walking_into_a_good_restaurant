@@ -15,5 +15,57 @@
 }
 
 body {
-  background-color: aqua;
+  background-color: white;
+}
+
+*{
+  margin: 0;
+  padding : 0;
+}
+.button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-block;
+  border-right: 1px solid black;
+  margin : 10px 0 0 0;
+}
+.buttont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-block;
+}
+
+button{ 
+  position: relative;
+  margin: 30px 90px 30px 90px ;
+  background-color: white;
+  border: none;
+  font-family: 'EliceDigitalBaeum';
+  font-weight: bold ;
+  font-size: 20px;
+}
+
+.bottom{
+  border-bottom : 1px solid black;
+  margin : 20px 0 0 0 ; 
+}
+
+button:after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 0px;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.3s;
+  opacity: 0;
+  background-color: #ba0c2f ;
+}
+button:hover:after{
+  width: 100%;
+  opacity: 1;
 }
