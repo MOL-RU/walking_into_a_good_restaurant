@@ -7,6 +7,52 @@
     <title>join</title>
   </head>
   <body>
-    <h1>join</h1>
+    <header>
+      <span>누구보다 빠르게 맛집투어 시작하기</span>
+    </header>
+
+    <main>
+      {% if errorMessage %}
+      <span>{{[errorMessage]}}</span>
+      {% endif %}
+      <form method="POST">
+        <input
+          placeholder="아이디 입력"
+          ,
+          type="text"
+          ,
+          name="username"
+          ,
+          required
+        />
+        <input
+          placeholder="비밀번호 입력"
+          ,
+          type="text"
+          ,
+          name="password"
+          ,
+          required
+        />
+        <input
+          placeholder="비밀번호 확인"
+          ,
+          type="text"
+          ,
+          name="password2"
+          ,
+          required
+        />
+        <input placeholder="가입질문" , type="text" , name="check" , required />
+        <input type="submit" value="Join" />
+      </form>
+    </main>
+
+    <footer>
+      <div>
+        <span>Already have an account?</span>
+        <a href="/login">Log in now</a>
+      </div>
+    </footer>
   </body>
 </html>
