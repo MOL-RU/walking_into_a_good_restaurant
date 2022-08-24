@@ -5,52 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>join</title>
+    <link rel="stylesheet" href="/public/css/join.css" />
   </head>
   <body>
     <header>
-      <span>누구보다 빠르게 맛집투어 시작하기</span>
+      <div>
+        <span>회원가입</span>
+      </div>
     </header>
 
     <main>
-      {% if errorMessage %}
-      <span>{{[errorMessage]}}</span>
-      {% endif %}
-      <form method="POST">
-        <input
-          placeholder="아이디 입력"
-          ,
-          type="text"
-          ,
-          name="username"
-          ,
-          required
-        />
-        <input
-          placeholder="비밀번호 입력"
-          ,
-          type="text"
-          ,
-          name="password"
-          ,
-          required
-        />
-        <input
-          placeholder="비밀번호 확인"
-          ,
-          type="text"
-          ,
-          name="password2"
-          ,
-          required
-        />
-        <input placeholder="가입질문" , type="text" , name="check" , required />
-        <input type="submit" value="Join" />
+      <div class="errormsg">
+        {% if errorMessage %}
+        <span>{{[errorMessage]}}</span>
+        {% endif %}
+      </div>
+
+      <form method="POST" class="join_form">
+        <div>
+          <span>아이디</span>
+          <input
+            placeholder="아이디 입력"
+            ,
+            type="text"
+            ,
+            name="username"
+            ,
+            required
+          />
+        </div>
+        <div>
+          <span>비밀번호</span>
+          <input
+            placeholder="비밀번호 입력"
+            ,
+            type="text"
+            ,
+            name="password"
+            ,
+            required
+          />
+        </div>
+        <div>
+          <span>비밀번호 확인</span>
+          <input
+            placeholder="비밀번호 확인"
+            ,
+            type="text"
+            ,
+            name="password2"
+            ,
+            required
+          />
+        </div>
+        <div>
+          <span>가입질문</span>
+          <p>Q. 시계탑에 살고 있는 동물은?</p>
+          <input
+            placeholder="가입질문"
+            ,
+            type="text"
+            ,
+            name="check"
+            ,
+            required
+          />
+        </div>
+
+        <input type="submit" value="Join" class="join_submit" />
       </form>
     </main>
 
     <footer>
       <div>
-        <span>Already have an account?</span>
+        <span>이미 계정이 있나요?</span>
         <a href="/login">Log in now</a>
       </div>
     </footer>
