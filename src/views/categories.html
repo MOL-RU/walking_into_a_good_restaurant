@@ -130,19 +130,34 @@
             />
           </div>
           <div class="food__info">
-            <h3 class="food__title">{{[item.title]}}</h3>
-            <h4 class="food__distance">{{[item.description]}}</h4>
+            <a href="/food/{{[item.id]}}" id="title__link">
+              <h3 class="food__title">{{[item.title]}}</h3>
+            </a>
+            <h4 class="food__menu">{{[item.description]}}</h4>
+            {% for hashtag in item.hashtags %}
+            <h5 class="food__hashtag">{{[hashtag]}}</h5>
+            {% endfor %}
           </div>
-          {% for hashtag in item.hashtags %}
-          <h5 class="food__hashtag">{{[hashtag]}}</h5>
-          {% endfor %}
         </div>
         {% endfor %}
       </div>
       <div id="map" class="section__map">
-        <img id="sjumap" src=/public/image/세종대지도.png alt="세종대지도"
-        width=100% height=100%/>
+        <div id="view__map" style="width:500px;height:400px;" ></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=10a6b95ea1da145104015187348cefdc"></script>
+        <script>
+          var container = document.getElementById('map');
+          var options = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667),
+            level: 3
+          };
+          
+          var map = new kakao.maps.Map(container, options);
+        </script>
       </div>
     </div>
+    <div class="homekey">
+      <a href="../main" id="home__link"><p>home</p></a>
+    </div>
+    
   </body>
 </html>
