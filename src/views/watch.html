@@ -4,18 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/watch.css">
     <title>{{[food.title]}}</title>
   </head>
   <body>
     <h1 class = "name">{{[food.title]}}</h1>
     <ul>
       <img class = "image"src="/{{[food.foodUrl]}}" , width="100" , height="100" />
-      <li >{{[food.description]}}</li>
-      <li>{{[food.hashtags]}}</li>
+      <li calss="menu" >{{[food.description]}}</li>
+      <li class="hashtag">{{[food.hashtags]}}</li>
     </ul>
-    <a href="{{[food._id]}}/edit">edit food</a>
-    <a href="{{[food._id]}}/delete">Delete food</a>
+    <a class= "edit" href="{{[food._id]}}/edit">edit food</a>
+    <a class="delete" href="{{[food._id]}}/delete">Delete food</a>
     <br />
-    <a href="/main">go to home</a>
+    <a class="home" href="/main">go to home</a>
   </body>
 </html>
