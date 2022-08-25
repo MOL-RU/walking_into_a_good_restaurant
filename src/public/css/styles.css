@@ -15,7 +15,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #f1f0d8;
 }
 
 *{
@@ -40,7 +40,7 @@ body {
 button{ 
   position: relative;
   margin: 30px 90px 30px 90px ;
-  background-color: white;
+  background-color: #f1f0d8;
   border: none;
   font-family: 'EliceDigitalBaeum';
   font-weight: bold ;
@@ -68,4 +68,11 @@ button:after{
 button:hover:after{
   width: 100%;
   opacity: 1;
+}
+
+.name{
+  font-family: "EliceDigitalBaeum-Bd";
+  text-decoration: none;
+  color: black;
+  font-size : 30px;
 }

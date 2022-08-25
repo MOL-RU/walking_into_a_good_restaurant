@@ -38,14 +38,14 @@
 
     <main>
       {% for item in foods %}
-      <a href="/food/{{[item.id]}}">{{[item.title]}}</a>
+      <a class="name" href="/food/{{[item.id]}}">{{[item.title]}}</a>
       <ul>
-        <img src="{{[item.foodUrl]}}" , width="100" , height="100" />
-        <li>{{[item.description]}}</li>
-        <li>{{[item.category]}}</li>
+        <img class = "image" src="{{[item.foodUrl]}}" , width="100" , height="100" />
+        <li class="description">{{[item.description]}}</li>
+        <li class="category">{{[item.category]}}</li>
         {% for hashtag in item.hashtags %}
         <ul>
-          <li>{{[hashtag]}}</li>
+          <li class="hashtag">{{[hashtag]}}</li>
         </ul>
         {% endfor %}
       </ul>
