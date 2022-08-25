@@ -5,13 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/public/css/join.css" />
   </head>
   <body>
+    <header>
+      <div>
+        <span>음식 업로드하기</span>
+      </div>
+    </header>
     <form method="POST" , enctype="multipart/form-data">
-      <input placeholder="Title" , required, type="text" , name="title" />
+      <input
+        placeholder="가게 이름을 작성하세요."
+        ,
+        required,
+        type="text"
+        ,
+        name="title"
+      />
       <br />
       <input
-        placeholder="Description"
+        placeholder="음식의 메뉴를 작성하세요"
         ,
         required,
         type="text"
@@ -20,7 +33,7 @@
       />
       <br />
       <input
-        placeholder="Hashtagsm separated by comma."
+        placeholder="띄어쓰기 없이 해시태그를 작성하세요."
         ,
         required,
         type="text"
@@ -36,9 +49,15 @@
         ,
         name="category"
       />
-      <label for="foodpic">음식사진 올리기</label>
+      <label for="foodpic" class="upload_food_pic">음식사진 올리기</label>
       <input type="file" , id="foodpic" , name="foodpic" , accept="image/*" />
       <input type="submit" , value="Upload Food" , required />
     </form>
+
+    <footer>
+      <div>
+        <a href="/main">홈으로 돌아가기</a>
+      </div>
+    </footer>
   </body>
 </html>
