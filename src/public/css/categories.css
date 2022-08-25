@@ -24,8 +24,9 @@ h1, h2, h3, h4, h5, h6{
     padding-bottom: 15px;
     text-align: center;
     margin: auto;
-    max-width: 1150px;
+    max-width: 90%;
     border-bottom: 3px solid black;
+    overflow: auto;
 }
 
 .about__majors {
@@ -48,13 +49,13 @@ h2{
 /* main */
 #main{
     margin: 0 auto;
-    width: 1150px;
+    width: 90%;
 }
 /* line */
 .section__line{
     float: left;
-    width: 350px;
-    height: 450px;
+    width: 30.4%;
+    height: 600px;
     overflow-y: scroll;
     overflow-x: auto;
 }
@@ -115,8 +116,8 @@ h5{
 /* map */
 .section__map{
     float: right;
-    width: 800px;
-    height: 450px;
+    width: 69.6%;
+    height: 600px;
 }
 
 #sjumap{
