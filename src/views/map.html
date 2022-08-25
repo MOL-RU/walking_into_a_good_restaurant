@@ -4,9 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/public/css/map.css" />
     <title>map</title>
   </head>
   <body>
-    <h1>map</h1>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <!-- 로고/메인 -->
+      <div class="navbar__logo">
+        <img class="sejong-logo" src="/src/public/image/하얀세종대로고.png" width="30" height="30" />
+        <a href="/main">걸어서 맛집 속으로</a>
+      </div>
+      <!-- 메뉴리스트 -->
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item"><a href="/food/categories">종류별 맛집들</a></li>
+          <li class="navbar__menu__item"><a href="/food/map">가까운 맛집들</a></li>
+          <li class="navbar__menu__item"><a href="/food/recommend">오늘의 메뉴 추천</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 지도 띄우기 -->
+    <div id="map__location" style="width:100%;height:100vh;"></div>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=7b28998a2dab131f76a6134f378d5598"></script>
+    <script>
+      var container = document.getElementById("map__location");
+      var options = {
+        center: new kakao.maps.LatLng(37.549037, 127.075107),
+        level: 3
+      };
+  
+      var map__location = new kakao.maps.Map(container, options);
+    </script>
   </body>
 </html>
