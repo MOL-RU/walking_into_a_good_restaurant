@@ -98,3 +98,19 @@ export const recommend = async (req, res) => {
   recoFood = recoFood[0];
   return res.render("recommend", { recoFood });
 };
+
+export const category = async (req, res) => {
+  let foods = await Food.find({}).sort({ createdAt: "desc" });
+  let res_foods = [];
+  const { category } = req.query;
+  console.log(req.query);
+  if (category) {
+    foods = [];
+    foods = await Food.find({
+      category: {
+        $regex: new RegExp(`${category}`, "i"),
+      },
+    });
+  }
+  return res.render("categories", { foods });
+};

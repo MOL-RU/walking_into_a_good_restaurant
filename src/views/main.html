@@ -7,38 +7,36 @@
     <title>main</title>
     <link rel="stylesheet" href="/public/css/styles.css" />
     <style>
-      body{
+      body {
         text-align: center;
       }
     </style>
   </head>
-  
+
   <body>
     <nav>
-
       <div class="button">
-          <button>종류별 맛집들</button>
+        <button onclick="location.href = '/food/categories'">
+          종류별 맛집들
+        </button>
       </div>
       <div class="button">
-          <button>가까운 맛집들</button>
+        <button onclick="location.href = '/food/map'">가까운 맛집들</button>
       </div>
       <div class="button">
-          <button>오늘의 메뉴 추천</button>
+        <button onclick="location.href = '/food/recommend'">
+          오늘의 메뉴 추천
+        </button>
       </div>
       <div class="buttont">
-          <button>즐겨찾기</button>
+        <button onclick="location.href = '/food/upload'">
+          음식 업로드하기
+        </button>
       </div>
       <div class="bottom"></div>
-      </nav>
-
-
+    </nav>
 
     <main>
-      <a href="/food/upload">upload food</a>
-      <a href="/food/search">search food</a>
-      <a href="/food/recommend">recommend food</a>
-      <br />
-      <br />
       {% for item in foods %}
       <a href="/food/{{[item.id]}}">{{[item.title]}}</a>
       <ul>

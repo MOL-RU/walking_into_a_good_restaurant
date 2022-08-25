@@ -9,14 +9,13 @@ import {
   search,
   categorySort,
   recommend,
+  category,
 } from "../controllers/foodController.js";
 import { uploadFiles } from "../middlewares.js";
 
 const foodRouter = express.Router();
 
-foodRouter.get("/categories", (req, res) => {
-  return res.render("categories");
-});
+foodRouter.get("/categories", category);
 
 foodRouter.get("/map", (req, res) => {
   return res.render("map");

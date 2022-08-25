@@ -10,90 +10,139 @@
   </head>
   <body>
     <div id="navbar" class="section__navbar">
-      <div calss="korea">
-        <div class="navbar__img">
-          <img src=/public/image/korea.png alt="한식" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">한식</h2>
-      </div>
-      <div calss="china">
-        <div class="navbar__img">
-          <img src=/public/image/china.png alt="중식" width=100% height=100%/>
-        </div>
-        <h2 class="china__title">중식</h2>
-      </div>
-      <div calss="japan">
-        <div class="navbar__img">
-          <img src=/public/image/japan.png alt="일식" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">일식</h2>
-      </div>
-      <div calss="western">
-        <div class="navbar__img">
-          <img src=/public/image/western.png alt="양식" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">양식</h2>
-      </div>
-      <div calss="chicken">
-        <div class="navbar__img">
-          <img src=/public/image/chicken.png alt="치킨" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">치킨</h2>
-      </div>
-      <div calss="burger">
-        <div class="navbar__img">
-          <img src=/public/image/burger.png alt="버거" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">버거</h2>
-      </div>
-      <div calss="pizza">
-        <div class="navbar__img">
-          <img src=/public/image/pizza.png alt="피자" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">피자</h2>
-      </div>
-      <div calss="flour">
-        <div class="navbar__img">
-          <img src=/public/image/flour.png alt="분식" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">분식</h2>
-      </div>
-      <div calss="dessert">
-        <div class="navbar__img">
-          <img src=/public/image/dessert.png alt="디저트" width=100% height=100%/>
-        </div>
-        <h2 class="navbar__title">디저트</h2>
-      </div>
+      <form method="GET">
+        <button
+          class="korea"
+          name="category"
+          value="한식"
+          onclick="location.href = '/food/categories'"
+          type="submit"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/korea.png alt="한식" width=100% height=100%/>
+          </div>
+          <h2 class="navbar__title">한식</h2>
+        </button>
+        <button
+          name="category"
+          value="중식"
+          onclick="location.href = '/food/categories'"
+          class="china"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/china.png alt="중식" width=100% height=100%/>
+          </div>
+          <h2 class="china__title">중식</h2>
+        </button>
+        <button
+          class="japan"
+          name="category"
+          value="일본"
+          onclick="location.href = '/food/categories'"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/japan.png alt="일식" width=100% height=100%/>
+          </div>
+          <h2 class="navbar__title">일식</h2>
+        </button>
+        <button
+          class="western"
+          name="category"
+          value="양식"
+          onclick="location.href = '/food/categories'"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/western.png alt="양식" width=100%
+            height=100%/>
+          </div>
+          <h2 class="navbar__title">양식</h2>
+        </button>
+        <button
+          class="chicken"
+          name="category"
+          value="치킨"
+          onclick="location.href = '/food/categories'"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/chicken.png alt="치킨" width=100%
+            height=100%/>
+          </div>
+          <h2 class="navbar__title">치킨</h2>
+        </button>
+        <button
+          class="burger"
+          name="category"
+          value="버거"
+          onclick="location.href = '/food/categories'"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/burger.png alt="버거" width=100%
+            height=100%/>
+          </div>
+          <h2 class="navbar__title">버거</h2>
+        </button>
+        <button
+          class="pizza"
+          name="category"
+          value="피자"
+          onclick="location.href = '/food/categories'"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/pizza.png alt="피자" width=100% height=100%/>
+          </div>
+          <h2 class="navbar__title">피자</h2>
+        </button>
+        <button
+          class="flour"
+          name="category"
+          value="분식"
+          onclick="location.href = '/food/categories'"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/flour.png alt="분식" width=100% height=100%/>
+          </div>
+          <h2 class="navbar__title">분식</h2>
+        </button>
+        <button
+          class="dessert"
+          name="category"
+          value="디저트"
+          onclick="location.href = '/food/categories'"
+        >
+          <div class="navbar__img">
+            <img src=/public/image/dessert.png alt="디저트" width=100%
+            height=100%/>
+          </div>
+          <h2 class="navbar__title">디저트</h2>
+        </button>
+      </form>
     </div>
     <div id="main">
       <div id="line" class="section__line">
+        {% for item in foods %}
         <div class="food__list">
           <div class="food__img">
-            <img src=/public/image/방이샤브샤브칼국수.jpg alt="방이샤브샤브칼국수" width=100% height=100%/>
+            <img
+              src="/{{[item.foodUrl]}}"
+              alt="{{[item.title]}}"
+              width="100%"
+              height="100%"
+            />
           </div>
           <div class="food__info">
-            <h3 class="food__title">방이샤브샤브칼국수</h3>
-            <h4 class="food__stars"><strong>★</strong> 4.5</h4>
-            <h4 class="food__distance">976m</h4>
+            <h3 class="food__title">{{[item.title]}}</h3>
+            <h4 class="food__distance">{{[item.description]}}</h4>
           </div>
-          <h5 class="food__hashtag">#여기에 해시태그 입력</h5>
+          {% for hashtag in item.hashtags %}
+          <h5 class="food__hashtag">{{[hashtag]}}</h5>
+          {% endfor %}
         </div>
-        <div class="food__list">
-          <div class="food__img">
-            <img src=/public/image/장수마을_정육식당.jpg alt="장수마을 정육식당" width=100% height=100%/>
-          </div>
-          <div class="food__info">
-            <h3 class="food__title">장수마을 정육식당</h3>
-            <h4 class="food__stars"><strong>★</strong> 3.0</h4>
-            <h4 class="food__distance">1576m</h4>
-          </div>
-          <h5 id="last__hashtag" class="food__hashtag">#여기에 해시태그 입력</h5>
-        </div>
+        {% endfor %}
       </div>
       <div id="map" class="section__map">
-        <img id="sjumap" src=/public/image/세종대지도.png alt="세종대지도" width=100% height=100%/>
+        <img id="sjumap" src=/public/image/세종대지도.png alt="세종대지도"
+        width=100% height=100%/>
       </div>
-    </div> 
-    
+    </div>
   </body>
 </html>

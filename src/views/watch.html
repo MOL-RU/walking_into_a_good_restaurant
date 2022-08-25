@@ -9,9 +9,9 @@
   <body>
     <h1>{{[food.title]}}</h1>
     <ul>
+      <img src="/{{[food.foodUrl]}}" , width="100" , height="100" />
       <li>{{[food.description]}}</li>
       <li>{{[food.hashtags]}}</li>
-      <li>{{[food.createdAt]}}</li>
     </ul>
     <a href="{{[food._id]}}/edit">edit food</a>
     <a href="{{[food._id]}}/delete">Delete food</a>
