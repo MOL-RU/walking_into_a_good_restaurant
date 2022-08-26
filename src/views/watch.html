@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="/public/css/watch.css">
     <title>{{[food.title]}}</title>
   </head>
+
   <body>
     <h1 class = "name">{{[food.title]}}</h1>
-    <ul>
+    <div>
       <img class = "image"src="/{{[food.foodUrl]}}" , width="100" , height="100" />
-      <li calss="menu" >{{[food.description]}}</li>
-      <li class="hashtag">{{[food.hashtags]}}</li>
-    </ul>
+      <p id = "menu" >{{[food.description]}}</p>
+      <li id="hashtag">{{[food.hashtags]}}</li>
+    </div>
     <a class= "edit" href="{{[food._id]}}/edit">edit food</a>
     <a class="delete" href="{{[food._id]}}/delete">Delete food</a>
     <br />

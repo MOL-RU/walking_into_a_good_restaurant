@@ -15,7 +15,7 @@
 }
 
 *{
-    margin : 0;
+    margin :0;
     padding : 0;
 }
 
@@ -43,19 +43,29 @@ body{
     height: 400px;
 }
 
-li {
-	position: relative;
-	font-size: 20px;
-    margin-bottom : 10px;
-	color: black;
+p{
+    font-size: 30px;
+    font-weight: 600;
 }
 
+li{
+    list-style: none;
+    color :#53565a;
+    font-size : 20px;
+    font-weight: 900;
+    opacity:0.6;
+    font-style: italic;
+
+}
 .edit {
     text-decoration: none;
     display:block;
     width:80px;
     line-height:60px;
     text-align:center;
+    margin-left : 10px;
     background-color:#53565a;
-    color:#fff;
+    color:white;
 }
+
+
