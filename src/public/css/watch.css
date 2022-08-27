@@ -57,15 +57,24 @@ li{
     font-style: italic;
 
 }
-.edit {
+a{
     text-decoration: none;
-    display:block;
-    width:80px;
-    line-height:60px;
-    text-align:center;
-    margin-left : 10px;
-    background-color:#53565a;
-    color:white;
+
 }
+
+a:link, a:visited {
+    background-color: #53565a;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin:30px;
+}
+a:hover, a:active {
+    background-color: #ba0c2f;
+    font-weight: bold;
+}
+
 
 

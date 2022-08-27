@@ -19,7 +19,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   font-family: "EliceDigitalBaeum";
   margin: 10px auto;
 }
@@ -129,6 +130,7 @@ h5 {
   margin: 5px 5%;
   padding: 0px 2% 10px;
 }
+
 .food__hashtag:last-child {
   border-bottom: 3px solid black;
 }
@@ -155,6 +157,38 @@ h5 {
   height: 430px;
   margin: 10px 30px 10px 20px;
 }
+
+/* map */
+
+.map__element {
+  width: 100%;
+  height: 10%;
+  padding: 0 5px;
+}
+
+#map__title {
+  font-size: 18px;
+  color: #ba0c2f;
+}
+
+#map__description {
+  font-size: 11px;
+}
+
+#map__navigation {
+  font-size: 9px;
+  color: #53565a;
+}
+
+.map__link {
+  text-decoration: none;
+  color: #53565a;
+}
+
+.map__link:hover {
+  color:#fdd262;
+}
+
 
 /* homekey */
 .homekey {
