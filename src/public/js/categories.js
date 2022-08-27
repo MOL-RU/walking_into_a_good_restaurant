@@ -27,7 +27,7 @@ let markerDB = [
 ]
 
 // 마커 지정하기
-for(i=0; i<14; i++) {
+for(i=0; i<markerDB.length; i++) {
 
   // 인포윈도우 내용과 스타일  
   let style = '' +
