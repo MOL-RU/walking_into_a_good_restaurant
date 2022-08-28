@@ -144,33 +144,7 @@
       <div id="map" class="section__map">
         <div id="view__map" style="width:500px;height:400px;" ></div>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=10a6b95ea1da145104015187348cefdc"></script>
-        <div id="script__map">
-          <script>
-            var container = document.getElementById('map');
-            var options = {
-              center: new kakao.maps.LatLng(37.550362, 127.074274),
-              level: 4
-            };
-            
-            var map = new kakao.maps.Map(container, options);
-          </script>
-        </div>
-        <div id="script__marker">
-          <script>
-            var markerPosition = new kakao.maps.LatLng(37.548194, 127.072968); 
-            var marker = new kakao.maps.Marker({
-              position: markerPosition
-            });
-            marker.setMap(map);
-            var iwContent = '<div style="padding:5px;">뱃놈test <br><a href="https://map.kakao.com/link/map/뱃놈,37.548194,127.072968" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/뱃놈,37.548194,127.072968" style="color:blue" target="_blank">길찾기</a></div>',
-              iwPosition = new kakao.maps.LatLng(37.548194, 127.072968);
-            var infowindow = new kakao.maps.InfoWindow({
-              position : iwPosition, 
-              content : iwContent
-            });
-            infowindow.open(map, marker); 
-          </script>
-        </div>
+        <script type="text/javascript" src="../public/js/categories.js"></script>
       </div>
     </div>
     <div class="homekey">
