@@ -36,51 +36,98 @@
   cursor: default;
 }
 
-/*Home 버튼 */
-
-.home {
-  width: 200px;
-  height: 75px;
-  padding: 10px;
+/* 버튼 의사클래스 */
+button:hover {
+  cursor: pointer;
+  color: var(--color-sejong-yellow);
+  
+}
+/* navbar 배경 */
+.recommend_navbar{
   background-color: var(--color-sejong-red);
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+}
+
+/*navbar 버튼 */
+
+.btn{
+
+  padding: 10px;
+  background-color: transparent;
+
   font-family: "EliceDigitalBaeum";
-  color: aliceblue;
   text-align: center;
 
   border: white;
 
   cursor: pointer;
-  margin-top: 0%;
+
+}
+/* navbar 왼쪽 */
+#main{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  font-size: var(--font--medium);
 }
 
-/* Home 버튼 글자 */
-button > h3 {
-  color: white;
+#main>h3{
+  margin-left: 10px;
+}
+
+/* navbar 오른쪽*/
+.navbar_right{
+  list-style:none;
+  display: flex;
+}
+
+.btn_right{
+  margin: 40px;
+  padding: 10px;
+}
+
+.btn_right:hover{
+  border-bottom: 2px solid var(--color-sejong-yellow);
+}
+
+
+/* navbar 버튼 글자 및 로고 */
+button {
+  color: var(--color-sejong-ivory);
+  font-size: var(--font--small);
+  font-weight: bolder;
   margin: 0%;
   cursor: pointer;
+  
 }
 
-button > p {
+button > img{
   cursor: pointer;
 }
-/* 오늘의 메뉴 추천 */
-.recommend_title {
-  padding: 20px 0px;
-  border-top: 2px solid var(--color-sejong-gray);
-  border-bottom: 2px solid var(--color-sejong-gray);
-}
+
 /* main 정렬 */
 section {
   text-align: center;
+  background-color: var(--color-sejong-ivory);
 }
 
+/* 오늘의 메뉴 추천 */
+.recommend_title {
+  padding: 20px 0px;
+}
+
+
 /* description 색상,글꼴 */
-h3 {
+.recommend_description {
   color: var(--color-sejong-gray);
   font-family: "EliceDigitalBaeum";
 
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 /* 추천 container */
@@ -97,10 +144,44 @@ h3 {
   width: 400px;
   height: 400px;
   border-radius: 20%;
-  background-color: var(--color-sejong-ivory);
+  background-color: white;
 
   margin: auto;
   margin-top: 20px;
+
+  font-family: "EliceDigitalBaeum";
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 결과 창 정보 정렬 */
+.food_info{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+
+
+.recommend_result a{
+  text-decoration: none;
+  color: var(--color-sejong-red);
+  font-size: var(--font--medium);
+}
+.recommend .food_info_upper{
+  padding: 0;
+  margin-top: 10px;
+}
+
+.recommend_result .food_info_down{
+  color: var(--color-sejong-yellow);
+  padding: 0;
+}
+
+.recommend_result li{
+  list-style:none;
 }
 
 /* 추천 받기 버튼 */
@@ -111,14 +192,9 @@ h3 {
   border: none;
   background-color: var(--color-sejong-red);
 
-  margin-top: 20px;
+  margin: 30px;
 
   font-size: var(--font--regular);
   font-family: "EliceDigitalBaeum-Bd";
   color: white;
-}
-
-/* 추천 받기 버튼 클릭 */
-button:hover {
-  cursor: pointer;
 }
