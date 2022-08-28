@@ -42,8 +42,8 @@
       <a class="name" href="/food/{{[item.id]}}">{{[item.title]}}</a>
       <ul>
         <img class = "image" src="{{[item.foodUrl]}}" , width="100" , height="100" />
-        <li class="description">{{[item.description]}}</li>
-        <li class="category">{{[item.category]}}</li>
+        <p class="description">{{[item.description]}}</p>
+        <h4 class="category">{{[item.category]}}</h4>
         {% for hashtag in item.hashtags %}
         <ul>
           <li class="hashtag">{{[hashtag]}}</li>
