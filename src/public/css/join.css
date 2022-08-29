@@ -1,6 +1,23 @@
+@font-face {
+  font-family: "EliceDigitalBaeum-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "EliceDigitalBaeum";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
+  font-family: "EliceDigitalBaeum";
 }
+
 body {
   width: 100wh;
   background-color: #f1f0d8;
@@ -19,6 +36,8 @@ header div span {
   font-size: 30px;
   color: white;
   font-weight: bold;
+
+  cursor: default;
 }
 
 form {
@@ -53,6 +72,9 @@ form div {
 input {
   width: 300px;
   height: 50px;
+
+  border-radius: 10px;
+  border: 1.5px solid black;
 }
 
 .join_submit {
@@ -63,6 +85,8 @@ input {
   color: white;
   font-size: 20px;
   font-weight: bold;
+
+  cursor: pointer;
 }
 
 footer {

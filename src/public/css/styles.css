@@ -14,13 +14,14 @@
   font-style: normal;
 }
 
-body {
-  background-color: #f1f0d8;
-}
 
 *{
   margin: 0;
   padding : 0;
+}
+
+nav{
+  background-color: #f1f0d8;
 }
 .button{
   display: flex;
@@ -71,9 +72,39 @@ button:hover:after{
 }
 
 .name{
+
   font-family: "EliceDigitalBaeum-Bd";
   text-decoration: none;
-  color: black;
-  font-size : 30px;
+  color:#ba0c2f;
+  font-size : 40px;
 }
 
+.name:hover{
+  color: #fdd262;
+
+}
+
+.image{
+  margin-top:5px;
+  width : 300px;
+  height: 300px;
+  border: solid;
+
+}
+
+p{
+  margin-top: 10px;
+  font-family: "EliceDigitalBaeum";
+  margin-bottom: 7px;
+}
+
+li{
+  font-family: "EliceDigitalBaeum";
+  font-weight: 600;
+  color: #fdd262;
+  margin-bottom: 20px;
+}
+
+h4{
+  font-family: "EliceDigitalBaeum";
+}
